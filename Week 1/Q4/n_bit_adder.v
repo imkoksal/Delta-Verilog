@@ -7,17 +7,18 @@ module n_bit_adder#(parameter N=8)(
     output  cout
 
     );
-    
-    
-    //creating a HA module instead of a FA in the first step
-    assign sum_between[0]=a[0]^b[0];
-    assign carry_between[0]=a[0]&b[0];
-   
+	
    //defining the sum of each FA
    wire [N:0]sum_between;
    
    //defining Cin and Cout to be used between the FA modules
    wire [N-1:0]carry_between;
+    
+    //creating a HA module instead of a FA in the first step
+    assign sum_between[0]=a[0]^b[0];
+    assign carry_between[0]=a[0]&b[0];
+   
+
     
     genvar i;
     generate

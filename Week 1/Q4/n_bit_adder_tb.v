@@ -12,7 +12,8 @@ module n_bit_adder_tb #(parameter N = 8);
   n_bit_adder #(.N(N)) uut (
     .a(a),
     .b(b),
-    .sum(sum)
+    .sum(sum),
+	.cout(cout)
   );
 
   // Clock generation
